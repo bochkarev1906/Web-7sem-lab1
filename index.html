@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Lab1_we">
+    <meta name="description" content="Web_lab1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Погода</title>
@@ -10,201 +10,224 @@
 <body>
     <main>
         <section class="header">
-            <h2>Погода здесь</h2>
+            <h1 class="title">Погода здесь</h1>
             <button type="button" class="update-button">Обновить геолокацию</button>
         </section>
         <section class="weather-here">
-            <h1>Санкт-Петербург</h1>
-            <img src="img/cloud.png" alt="SPb-icon">
-            <h2>12°C</h2>
-            <ul>
-                <li>
-                    <h3>Ветер</h3>
+            <section class="weather-here-info">
+                <h1>Санкт-Петербург</h1>
+                <section class="main">
+                    <img class="weather-here-icon" src="img/cloud.png" alt="SPb-icon">
+                    <div class="temperature">12°C</div>
+                </section>
+            </section>
+            <ul class="data-ul">
+                <li class="parameter">
+                    <b>Ветер</b>
                     6.0 м/с, ЮЗ
                 </li>
-                <li>
-                    <h3>Облачность</h3>
+                <li class="parameter">
+                    <b>Облачность</b>
                     Пасмурно
                 </li>
-                <li>
-                    <h3>Давление</h3>
+                <li class="parameter">
+                    <b>Давление</b>
                     754 мм.рт.ст.
                 </li>
-                <li>
-                    <h3>Влажность</h3>
+                <li class="parameter">
+                    <b>Влажность</b>
                     65%
                 </li>
-                <li>
-                    <h3>Координаты</h3>
+                <li class="parameter">
+                    <b>Координаты</b>
                     [59°57′, 30°19′]
                 </li>
             </ul>
         </section>
-        <section class="favorites">
+        <section class="favorites-header">
+            <h1 class="title">Избранное</h1>
+            <form class="add-city">
+                <input class="input" required type="text" placeholder="Добавить новый город">
+                <a href="#"><img class="add-city-icon" src="img/add.png" alt="Add city"></a>
+            </form>
+        </section>
+        <section class="cities">
             <section class="city">
-                <h2>Мадрид</h2>
-                <img src="img/partly-cloudy.png" alt="Moscow-icon">
-                <a href="#"><img src="img/delete.png" alt="Delete city"></a>
-                <h2>10°C</h2>
+                <section class="favorites-main">
+                    <h2>Мадрид</h2>
+                    <h2>12°C</h2>
+                    <img class="icon-weather" src="img/partly-cloudy.png" alt="Madrid-icon">
+                    <a href="#"><img class="icon-delete" src="img/delete.png" alt="Delete city"></a>
+                </section>
                 <ul>
-                    <li>
-                        <h3>Ветер</h3>
+                    <li class="parameter">
+                        <b>Ветер</b>
                         8.5 м/с, С
                     </li>
-                    <li>
-                        <h3>Облачность</h3>
+                    <li class="parameter">
+                        <b>Облачность</b>
                         Облачно с прояснениями
                     </li>
-                    <li>
-                        <h3>Давление</h3>
+                    <li class="parameter">
+                        <b>Давление</b>
                         756 мм.рт.ст.
                     </li>
-                    <li>
-                        <h3>Влажность</h3>
-                        35%
+                    <li class="parameter">
+                        <b>Влажность</b>
+                        65%
                     </li>
-                    <li>
-                        <h3>Координаты</h3>
+                    <li class="parameter">
+                        <b>Координаты</b>
                         [25°45′, 33°37′]
                     </li>
                 </ul>
             </section>
             <section class="city">
-                <h2>Манчестер</h2>
-                <img src="img/lighting.png" alt="Manchester-icon">
-                <a href="#"><img src="img/delete.png" alt="Delete city"></a>
-                <h2>8°C</h2>
+                <section class="favorites-main">
+                    <h2>Манчестер</h2>
+                    <h2>18°C</h2>
+                    <img class="icon-weather" src="img/lighting.png" alt="Manchester-icon">
+                    <a href="#"><img class="icon-delete" src="img/delete.png" alt="Delete city"></a>
+                </section>
                 <ul>
-                    <li>
-                        <h3>Ветер</h3>
+                    <li class="parameter">
+                        <b>Ветер</b>
                         4.0 м/с, З
                     </li>
-                    <li>
-                        <h3>Облачность</h3>
+                    <li class="parameter">
+                        <b>Облачность</b>
                         Гроза
                     </li>
-                    <li>
-                        <h3>Давление</h3>
+                    <li class="parameter"> 
+                        <b>Давление</b>
                         755 мм.рт.ст.
                     </li>
-                    <li>
-                        <h3>Влажность</h3>
-                        30%
+                    <li class="parameter">
+                        <b>Влажность</b>
+                        39%
                     </li>
-                    <li>
-                        <h3>Координаты</h3>
+                    <li class="parameter">
+                        <b>Координаты</b>
                         [51°31′, 62°22′]
                     </li>
                 </ul>
             </section>
             <section class="city">
-                <h2>Нью-Йорк</h2>
-                <img src="img/rain.png" alt="New-York-icon">
-                <a href="#"><img src="img/delete.png" alt="Delete city"></a>
-                <h2>4°C</h2>
+                <section class="favorites-main">
+                    <h2>Нью-Йорк</h2>
+                    <h2>6°C</h2>
+                    <img class="icon-weather" src="img/rain.png" alt="New-York-icon">
+                    <a href="#"><img class="icon-delete" src="img/delete.png" alt="Delete city"></a>
+                </section>
                 <ul>
-                    <li>
-                        <h3>Ветер</h3>
+                    <li class="parameter">
+                        <b>Ветер</b>
                         4.8 м/с, В
                     </li>
-                    <li>
-                        <h3>Облачность</h3>
+                    <li class="parameter">
+                        <b>Облачность</b>
                         Небольшой дождь
                     </li>
-                    <li>
-                        <h3>Давление</h3>
+                    <li class="parameter">
+                        <b>Давление</b>
                         750 мм.рт.ст.
                     </li>
-                    <li>
-                        <h3>Влажность</h3>
-                        60%
+                    <li class="parameter">
+                        <b>Влажность</b>
+                        34%
                     </li>
-                    <li>
-                        <h3>Координаты</h3>
+                    <li class="parameter">
+                        <b>Координаты</b>
                         [58°36′, 94°65′]
                     </li>
                 </ul>
             </section>
             <section class="city">
-                <h2>Пекин</h2>
-                <img src="img/sun.png" alt="Bejing-icon">
-                <a href="#"><img src="img/delete.png" alt="Delete city"></a>
-                <h2>-3°C</h2>
+                <section class="favorites-main">
+                    <h2>Пекин</h2>
+                    <h2>13°C</h2>
+                    <img class="icon-weather" src="img/sun.png" alt="Bejing-icon">
+                    <a href="#"><img class="icon-delete" src="img/delete.png" alt="Delete city"></a>
+                </section>
                 <ul>
-                    <li>
-                        <h3>Ветер</h3>
+                    <li class="parameter">
+                        <b>Ветер</b>
                         3.0 м/с, ЮЗ
                     </li>
-                    <li>
-                        <h3>Облачность</h3>
-                        Ясно
+                    <li class="parameter">
+                        <b>Облачность</b>
+                        Ясно 
                     </li>
-                    <li>
-                        <h3>Давление</h3>
+                    <li class="parameter">
+                        <b>Давление</b>
                         757 мм.рт.ст.
                     </li>
-                    <li>
-                        <h3>Влажность</h3>
-                        90%
+                    <li class="parameter">
+                        <b>Влажность</b>
+                        93%
                     </li>
-                    <li>
-                        <h3>Координаты</h3>
+                    <li class="parameter">
+                        <b>Координаты</b>
                         [38°51′, 22°50′]
                     </li>
                 </ul>
             </section>
             <section class="city">
-                <h2>Каир</h2>
-                <img src="img/snow.png" alt="Caire-icon">
-                <a href="#"><img src="img/delete.png" alt="Delete city"></a>
-                <h2>-2°C</h2>
+                <section class="favorites-main">
+                    <h2>Каир</h2>
+                    <h2>-2°C</h2>
+                    <img class="icon-weather" src="img/snow.png" alt="Caire-icon">
+                    <a href="#"><img class="icon-delete" src="img/delete.png" alt="Delete city"></a>
+                </section>
                 <ul>
-                    <li>
-                        <h3>Ветер</h3>
+                    <li class="parameter">
+                        <b>Ветер</b>
                         1.5 м/с, СВ
                     </li>
-                    <li>
-                        <h3>Облачность</h3>
+                    <li class="parameter">
+                        <b>Облачность</b>
                         Снег
                     </li>
-                    <li>
-                        <h3>Давление</h3>
+                    <li class="parameter">
+                        <b>Давление</b>
                         764 мм.рт.ст.
                     </li>
-                    <li>
-                        <h3>Влажность</h3>
-                        5%
+                    <li class="parameter">
+                        <b>Влажность</b>
+                        15%
                     </li>
-                    <li>
-                        <h3>Координаты</h3>
+                    <li class="parameter">
+                        <b>Координаты</b>
                         [53°30′, 5°47′]
                     </li>
                 </ul>
             </section>
             <section class="city">
-                <h2>Рим</h2>
-                <img src="img/cloud.png" alt="Rome-icon">
-                <a href="#"><img src="img/delete.png" alt="Delete city"></a>
-                <h2>16°C</h2>
+                <section class="favorites-main">
+                    <h2>Рим</h2>
+                    <h2>16°C</h2>
+                    <img class="icon-weather" src="img/cloud.png" alt="Rome-icon">
+                    <a href="#"><img class="icon-delete" src="img/delete.png" alt="Delete city"></a>
+                </section>
                 <ul>
-                    <li>
-                        <h3>Ветер</h3>
+                    <li class="parameter">
+                        <b>Ветер</b>
                         2.0 м/с, СЗ
                     </li>
-                    <li>
-                        <h3>Облачность</h3>
+                    <li class="parameter">
+                        <b>Облачность</b>
                         Пасмурно
                     </li>
-                    <li>
-                        <h3>Давление</h3>
+                    <li class="parameter">
+                        <b>Давление</b>
                         759 мм.рт.ст.
                     </li>
-                    <li>
-                        <h3>Влажность</h3>
-                        76%
+                    <li class="parameter">
+                        <b>Влажность</b>
+                        56%
                     </li>
-                    <li>
-                        <h3>Координаты</h3>
+                    <li class="parameter">
+                        <b>Координаты</b>
                         [57°53′, 14°26′]
                     </li>
                 </ul>

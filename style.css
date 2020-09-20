@@ -4,21 +4,96 @@ body {
     background-color: rgb(131, 201, 135);
     color: rgb(0, 0, 0);
 }
-h1{
-    color: black;
-    font-size: 24pt;
+.title{
+    font-size: 30pt;
+    font-weight: 400;
 }
 .header{
     display: flex;
     justify-content: flex-start;
-}
-.city{
-    flex: 50%;
+    align-items: center;
 }
 .update-button{
-    border-radius: 10px;
+    font-size: 14pt;
+    cursor: pointer;
+    margin-left: 32%; 
+    padding: 10px;
+    background: rgb(255, 255, 255);  
 }
-.favorites{
+.weather-here{
+    display: flex;
+    justify-content: space-between;
+}
+.weather-here-icon{
+    width: 150px;
+    height: 150px;
+}
+.weather-here-info{
+    width: calc(1/2 * 100% - (1 - 1/2) * 8%);
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.temperature{
+    font-size: 76pt;
+}
+.data-ul{
+    width: calc(1/2 * 100% - (1 - 1/2) * 8%);
+}
+.parameter{
+    margin-bottom: 8px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    list-style-type: none;
+}
+.add-city-icon{
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+ul{
+    padding: 0;
+}
+h1{
+    color: black;
+    font-size: 24pt;
+}
+.add-city{
+    display: flex;
+    align-items: center;
+}
+.city{
+    width: calc(1/2 * 100% - (1 - 1/2) * 8%);
+}
+.cities{
+    grid-area: favorites-cities;
     display: flex; 
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+.favorites-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input{
+    background: rgb(255, 255, 255);
+    cursor: text;
+    padding: 8px;
+}
+.favorites-main{
+    display: flex;
+    justify-content: space-between;
+}
+.icon-weather{
+    width: 70px;
+    height: 70px;
+}
+.icon-delete{
+    width: 50px;
+    height: 50px;
 }
