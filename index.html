@@ -2,233 +2,241 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Web_lab1">
+    <meta name="description" content="Lab1_web">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Погода</title>
 </head>
 <body>
+    <header class="header">
+        <h1 class="title">Погода здесь</h1>
+        <button class="update-button" type="button">Обновить геолокацию</button>
+        <button class="update-media"><img class="update-img" src="img/update.png" alt="Update-geolocation"></button>
+    </header>
     <main>
-        <section class="header">
-            <h1 class="title">Погода здесь</h1>
-            <button type="button" class="update-button">Обновить геолокацию</button>
-        </section>
         <section class="weather-here">
             <section class="weather-here-info">
-                <h1>Санкт-Петербург</h1>
+                <h2>Санкт-Петербург</h2>
                 <section class="main">
                     <img class="weather-here-icon" src="img/cloud.png" alt="SPb-icon">
-                    <div class="temperature">12°C</div>
+                    <span class="temperature-here">12°C</span>
                 </section>
             </section>
             <ul class="data-ul">
                 <li class="parameter">
-                    <b>Ветер</b>
-                    6.0 м/с, ЮЗ
+                    <span class="param">Ветер</span>
+                    <span>6.0 м/с, ЮЗ</span>
                 </li>
                 <li class="parameter">
-                    <b>Облачность</b>
-                    Пасмурно
+                    <span class="param">Облачность</span>
+                    <span>Пасмурно</span>
                 </li>
                 <li class="parameter">
-                    <b>Давление</b>
-                    754 мм.рт.ст.
+                    <span class="param">Давление</span>
+                    <span>754 мм.рт.ст.</span>
                 </li>
                 <li class="parameter">
-                    <b>Влажность</b>
-                    65%
+                    <span class="param">Влажность</span>
+                    <span>65%</span>
                 </li>
                 <li class="parameter">
-                    <b>Координаты</b>
-                    [59°57′, 30°19′]
+                    <span class="param">Координаты</span>
+                    <span>[59°57′, 30°19′]</span>
                 </li>
             </ul>
         </section>
         <section class="favorites-header">
-            <h1 class="title">Избранное</h1>
+            <h2 class="title">Избранное</h2>
             <form class="add-city">
                 <input class="input" required type="text" placeholder="Добавить новый город">
-                <a href="#"><img class="add-city-icon" src="img/add.png" alt="Add city"></a>
+                <button class="add-button"><img class="add-city-icon" src="img/add.png" alt="Add city"></button>
+            </form>
+        </section>
+        <section class="favorites-header-media">
+            <h2 class="title">Избранное</h2>
+            <form class="add-city">
+                <input class="input" required type="text" placeholder="Добавить новый город">
+                <button class="add-button"><img class="add-city-icon" src="img/add.png" alt="Add city"></button>
             </form>
         </section>
         <section class="cities">
             <section class="city">
-                <section class="favorites-main">
-                    <h2>Мадрид</h2>
-                    <h2>12°C</h2>
+                <section class="favorites-main"> 
+                    <h3>Мадрид</h3>
+                    <span class="temperature">12°C</span>
                     <img class="icon-weather" src="img/partly-cloudy.png" alt="Madrid-icon">
-                    <a href="#"><img class="icon-delete" src="img/delete.png" alt="Delete city"></a>
+                    <button class="delete-button"><img class="icon-delete" src="img/delete.png" alt="Delete city"></button>
                 </section>
                 <ul>
                     <li class="parameter">
-                        <b>Ветер</b>
-                        8.5 м/с, С
+                        <span class="param">Ветер</span>
+                        <span>8.5 м/с, С</span>
                     </li>
                     <li class="parameter">
-                        <b>Облачность</b>
-                        Облачно с прояснениями
+                        <span class="param">Облачность</span>
+                        <span>Облачно с прояснениями</span>
                     </li>
                     <li class="parameter">
-                        <b>Давление</b>
-                        756 мм.рт.ст.
+                        <span class="param">Давление</span>
+                        <span>756 мм.рт.ст.</span>
                     </li>
                     <li class="parameter">
-                        <b>Влажность</b>
-                        65%
+                        <span class="param">Влажность</span>
+                        <span>65%</span>
                     </li>
                     <li class="parameter">
-                        <b>Координаты</b>
-                        [25°45′, 33°37′]
+                        <span class="param">Координаты</span>
+                        <span>[25°45′, 33°37′]</span>
                     </li>
                 </ul>
             </section>
             <section class="city">
                 <section class="favorites-main">
-                    <h2>Манчестер</h2>
-                    <h2>18°C</h2>
+                    <h3>Манчестер</h3>
+                    <span class="temperature">18°C</span>
                     <img class="icon-weather" src="img/lighting.png" alt="Manchester-icon">
-                    <a href="#"><img class="icon-delete" src="img/delete.png" alt="Delete city"></a>
+                    <button class="delete-button"><img class="icon-delete" src="img/delete.png" alt="Delete city"></button>
                 </section>
                 <ul>
                     <li class="parameter">
-                        <b>Ветер</b>
-                        4.0 м/с, З
+                        <span class="param">Ветер</span>
+                        <span>4.0 м/с, З</span>
                     </li>
                     <li class="parameter">
-                        <b>Облачность</b>
-                        Гроза
+                        <span class="param">Облачность</span>
+                        <span>Гроза</span>
                     </li>
                     <li class="parameter"> 
-                        <b>Давление</b>
-                        755 мм.рт.ст.
+                        <span class="param">Давление</span>
+                        <span>755 мм.рт.ст.</span>
                     </li>
                     <li class="parameter">
-                        <b>Влажность</b>
-                        39%
+                        <span class="param">Влажность</span>
+                        <span>39%</span>
                     </li>
                     <li class="parameter">
-                        <b>Координаты</b>
-                        [51°31′, 62°22′]
+                        <span class="param">Координаты</span>
+                        <span>[51°31′, 62°22′]</span>
                     </li>
                 </ul>
             </section>
             <section class="city">
                 <section class="favorites-main">
-                    <h2>Нью-Йорк</h2>
-                    <h2>6°C</h2>
-                    <img class="icon-weather" src="img/rain.png" alt="New-York-icon">
-                    <a href="#"><img class="icon-delete" src="img/delete.png" alt="Delete city"></a>
+                    <h3>Нью-Йорк</h3>
+                    <span class="temperature">6°C</span>
+                    <img class="icon-weather" src="img/rain.png" alt="New_York-icon">
+                    <button class="delete-button"><img class="icon-delete" src="img/delete.png" alt="Delete city"></button>
                 </section>
                 <ul>
                     <li class="parameter">
-                        <b>Ветер</b>
-                        4.8 м/с, В
+                        <span class="param">Ветер</span>
+                        <span>4.8 м/с, В</span>
                     </li>
                     <li class="parameter">
-                        <b>Облачность</b>
-                        Небольшой дождь
+                        <span class="param">Облачность</span>
+                        <span>Небольшой дождь</span>
                     </li>
                     <li class="parameter">
-                        <b>Давление</b>
-                        750 мм.рт.ст.
+                        <span class="param">Давление</span>
+                        <span>750 мм.рт.ст.</span>
                     </li>
                     <li class="parameter">
-                        <b>Влажность</b>
-                        34%
+                        <span class="param">Влажность</span>
+                        <span>34%</span>
                     </li>
                     <li class="parameter">
-                        <b>Координаты</b>
-                        [58°36′, 94°65′]
+                        <span class="param">Координаты</span>
+                        <span>[58°36′, 94°65′]</span>
                     </li>
                 </ul>
             </section>
             <section class="city">
                 <section class="favorites-main">
-                    <h2>Пекин</h2>
-                    <h2>13°C</h2>
+                    <h3>Пекин</h3>
+                    <span class="temperature">13°C</span>
                     <img class="icon-weather" src="img/sun.png" alt="Bejing-icon">
-                    <a href="#"><img class="icon-delete" src="img/delete.png" alt="Delete city"></a>
+                    <button class="delete-button"><img class="icon-delete" src="img/delete.png" alt="Delete city"></button>
                 </section>
                 <ul>
                     <li class="parameter">
-                        <b>Ветер</b>
-                        3.0 м/с, ЮЗ
+                        <span class="param">Ветер</span>
+                        <span>3.0 м/с, ЮЗ</span>
                     </li>
                     <li class="parameter">
-                        <b>Облачность</b>
-                        Ясно 
+                        <span class="param">Облачность</span>
+                        <span>Ясно</span>
                     </li>
                     <li class="parameter">
-                        <b>Давление</b>
-                        757 мм.рт.ст.
+                        <span class="param">Давление</span>
+                        <span>757 мм.рт.ст.</span>
                     </li>
                     <li class="parameter">
-                        <b>Влажность</b>
-                        93%
+                        <span class="param">Влажность</span>
+                        <span>93%</span>
                     </li>
                     <li class="parameter">
-                        <b>Координаты</b>
-                        [38°51′, 22°50′]
+                        <span class="param">Координаты</span>
+                        <span>[38°51′, 22°50′]</span>
                     </li>
                 </ul>
             </section>
             <section class="city">
                 <section class="favorites-main">
-                    <h2>Каир</h2>
-                    <h2>-2°C</h2>
+                    <h3>Каир</h3>
+                    <span class="temperature">-2°C</span>
                     <img class="icon-weather" src="img/snow.png" alt="Caire-icon">
-                    <a href="#"><img class="icon-delete" src="img/delete.png" alt="Delete city"></a>
+                    <button class="delete-button"><img class="icon-delete" src="img/delete.png" alt="Delete city"></button>
                 </section>
                 <ul>
                     <li class="parameter">
-                        <b>Ветер</b>
-                        1.5 м/с, СВ
+                        <span class="param">Ветер</span>
+                        <span>1.5 м/с, СВ</span>
                     </li>
                     <li class="parameter">
-                        <b>Облачность</b>
-                        Снег
+                        <span class="param">Облачность</span>
+                        <span>Снег</span>
                     </li>
                     <li class="parameter">
-                        <b>Давление</b>
-                        764 мм.рт.ст.
+                        <span class="param">Давление</span>
+                        <span>764 мм.рт.ст.</span>
                     </li>
                     <li class="parameter">
-                        <b>Влажность</b>
-                        15%
+                        <span class="param">Влажность</span>
+                        <span>15%</span>
                     </li>
                     <li class="parameter">
-                        <b>Координаты</b>
-                        [53°30′, 5°47′]
+                        <span class="param">Координаты</span>
+                        <span>[53°30′, 5°47′]</span>
                     </li>
                 </ul>
             </section>
             <section class="city">
                 <section class="favorites-main">
-                    <h2>Рим</h2>
-                    <h2>16°C</h2>
+                    <h3>Рим</h3>
+                    <span class="temperature">16°C</span>
                     <img class="icon-weather" src="img/cloud.png" alt="Rome-icon">
-                    <a href="#"><img class="icon-delete" src="img/delete.png" alt="Delete city"></a>
+                    <button class="delete-button"><img class="icon-delete" src="img/delete.png" alt="Delete city"></button>
                 </section>
                 <ul>
                     <li class="parameter">
-                        <b>Ветер</b>
-                        2.0 м/с, СЗ
+                        <span class="param">Ветер</span>
+                        <span>2.0 м/с, СЗ</span>
                     </li>
                     <li class="parameter">
-                        <b>Облачность</b>
-                        Пасмурно
+                        <span class="param">Облачность</span>
+                        <span>Пасмурно</span>
                     </li>
                     <li class="parameter">
-                        <b>Давление</b>
-                        759 мм.рт.ст.
+                        <span class="param">Давление</span>
+                        <span>759 мм.рт.ст.</span>
                     </li>
                     <li class="parameter">
-                        <b>Влажность</b>
-                        56%
+                        <span class="param">Влажность</span>
+                        <span>56%</span>
                     </li>
                     <li class="parameter">
-                        <b>Координаты</b>
-                        [57°53′, 14°26′]
+                        <span class="param">Координаты</span>
+                        <span>[57°53′, 14°26′]</span>
                     </li>
                 </ul>
             </section>

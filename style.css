@@ -4,14 +4,18 @@ body {
     background-color: rgb(131, 201, 135);
     color: rgb(0, 0, 0);
 }
-.title{
-    font-size: 30pt;
-    font-weight: 400;
+ul{
+    padding: 0;
+    margin-top: 0;
 }
 .header{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+.title{
+    font-size: 30pt;
+    font-weight: 400;
 }
 .update-button{
     font-size: 14pt;
@@ -20,7 +24,17 @@ body {
     padding: 10px;
     background: rgb(255, 255, 255);  
 }
+.update-media{
+    display: none;
+}
 .weather-here{
+    display: flex;
+    justify-content: space-between;
+}
+.weather-here-info{
+    width: calc(1/2 * 100% - (1 - 1/2) * 6%);
+}
+.main{
     display: flex;
     justify-content: space-between;
 }
@@ -28,18 +42,11 @@ body {
     width: 150px;
     height: 150px;
 }
-.weather-here-info{
-    width: calc(1/2 * 100% - (1 - 1/2) * 8%);
-}
-.main{
-    display: flex;
-    justify-content: space-between;
-}
-.temperature{
+.temperature-here{
     font-size: 76pt;
 }
 .data-ul{
-    width: calc(1/2 * 100% - (1 - 1/2) * 8%);
+    width: calc(1/2 * 100% - (1 - 1/2) * 6%);
 }
 .parameter{
     margin-bottom: 8px;
@@ -49,35 +56,19 @@ body {
     background-color: white;
     list-style-type: none;
 }
-.add-city-icon{
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
-    margin-left: 5px;
-}
-ul{
-    padding: 0;
-}
-h1{
-    color: black;
-    font-size: 24pt;
-}
-.add-city{
-    display: flex;
-    align-items: center;
-}
-.city{
-    width: calc(1/2 * 100% - (1 - 1/2) * 8%);
-}
-.cities{
-    grid-area: favorites-cities;
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: space-between;
+.param{
+    font-weight: bold;
 }
 .favorites-header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.favorites-header-media{
+    display: none;
+}
+.add-city{
+    display: flex;
     align-items: center;
 }
 .input{
@@ -85,9 +76,34 @@ h1{
     cursor: text;
     padding: 8px;
 }
+.add-city-icon{
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+}
+.add-button{
+    border: 0; 
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 5px;
+}
+.cities{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.city{
+    width: calc(1/2 * 100% - (1 - 1/2) * 6%);
+}
+.temperature{
+    font-size: 20pt;
+    font-weight: bold;
+}
 .favorites-main{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .icon-weather{
     width: 70px;
@@ -96,4 +112,93 @@ h1{
 .icon-delete{
     width: 50px;
     height: 50px;
+}
+.delete-button{
+    border: 0; 
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+@media only screen and (max-width: 1000px) and (min-width: 721px) { 
+    body {
+        font-size: 14pt;
+    }
+    h2{
+        font-size: 24pt;
+    }
+    h3{
+        font-size: 17pt;
+    }
+    .temperature{
+        font-size: 16pt;
+    }
+    .weather-here-icon{
+        width: 100px;
+        height: 100px;
+    }
+    .temperature-here{
+        font-size: 60pt;
+    }
+    .add-city-icon{
+        width: 34px;
+        height: 34px;
+    }
+    .icon-weather{
+        width: 40px;
+        height: 40px;
+    }
+    .icon-delete{
+        width: 36px;
+        height: 36px;
+    }
+}
+@media only screen and (max-width: 720px) {
+    body {
+        margin: 0 5% 5% 5%;
+    }
+    .update-button{
+        display: none;
+    }
+    .update-img{
+        width: 50px;
+        height: 50px;
+    }
+    .update-media{
+        display: block;
+        margin-left: 5%;
+        border: 0; 
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+    }
+    .weather-here{
+        grid-area: weather-here;
+        display: flex;
+        flex-direction: column;
+    }
+    .weather-here-info{
+        width: 100%;
+    }
+    .data-ul{
+        width: 100%;
+    }
+    .favorites-header{
+        display: none;
+    }
+    .favorites-header-media{
+        display: flex;
+        flex-direction: column;
+    }
+    .input{
+        display: inline-block;
+        width: 100%;
+    }
+    .add-city-icon{
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+    }
+    .city{
+        width: 100%;
+    }
 }
